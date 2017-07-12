@@ -4,7 +4,7 @@
 - name: Install Mysql package
   yum: name={{ item }} state=present
   with_items:
-   - {{ db_package }}
+   - "{{ db_package }}"
    - MySQL-python
 
 - name: Configure SELinux to start mysql on any port
